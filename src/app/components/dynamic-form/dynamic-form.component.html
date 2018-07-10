@@ -1,7 +1,10 @@
 <div>
   <app-back-button></app-back-button>
   <form [formGroup]="form">
-    <input type="text" formControlName="firstName" />
+    <div *ngFor="let field of fields">
+      <label>{{ field.label }}</label>
+      <input [type]="field.type" [formControlName]="field.key" />
+    </div>
   </form>
   <pre>
     {{ form.value | json }}

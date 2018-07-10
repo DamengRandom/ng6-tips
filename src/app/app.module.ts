@@ -8,6 +8,7 @@ import { BasicFormComponent } from './components/basic-form/basic-form.component
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
 import { BackButtonComponent } from './shared/back-button/back-button.component';
+import { DynamicFormParentComponent } from './components/dynamic-form-parent/dynamic-form-parent.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BackButtonComponent } from './shared/back-button/back-button.component'
     BasicFormComponent,
     DashboardComponent,
     DynamicFormComponent,
-    BackButtonComponent
+    BackButtonComponent,
+    DynamicFormParentComponent
   ],
   imports: [
     AppRoutingModule,

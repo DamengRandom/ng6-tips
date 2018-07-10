@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
@@ -10,11 +10,23 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class DynamicFormComponent implements OnInit {
   form: FormGroup;
 
+  @Input() formFieldObject;
+
+  fields = [];
+
   constructor() { }
 
   ngOnInit() {
-    this.form = new FormGroup({
-      firstName: new FormControl('Damon')
-    });
+    const outputObject = {};
+    for (const prop of Object.keys(this.formFieldObject)) { // Object.keys means extracting all the object hash keys
+      outputObject[prop] = new FormControl(this.formFieldObject[prop].value);
+      this.fields.push({
+        key: prop,
+        label: this.formFieldObject[prop].label,
+        type: this.formFieldObject[prop].type
+      });
+    }
+    console.log(this.fields);
+    this.form = new FormGroup(outputObject);
   }
 }

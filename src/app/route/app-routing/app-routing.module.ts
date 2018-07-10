@@ -5,13 +5,13 @@ import { RouterModule, Routes } from '@angular/router';
 // components
 import { BasicFormComponent } from '../../components/basic-form/basic-form.component';
 import { DashboardComponent } from '../../components/dashboard/dashboard.component';
-import { DynamicFormComponent } from '../../components/dynamic-form/dynamic-form.component';
+import { DynamicFormParentComponent } from '../../components/dynamic-form-parent/dynamic-form-parent.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: 'basic-form', component: BasicFormComponent },
-  { path: 'dynamic-form', component: DynamicFormComponent }
+  { path: 'dynamic-form', component: DynamicFormParentComponent }
 ];
 
 @NgModule({
