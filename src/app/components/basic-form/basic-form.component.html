@@ -1,0 +1,64 @@
+<div>
+  <app-back-button></app-back-button>
+  <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)">
+    <fieldset ngModelGroup="login">
+      <label>Username: </label>
+      <input type="text" 
+        required 
+        minlength="6" 
+        name="name" 
+        [(ngModel)]="name" 
+        #nameRef="ngModel" />
+      <br/>
+      <label>Password: </label>
+      <input type="password" 
+        required 
+        minlength="6" 
+        name="password" 
+        [(ngModel)]="password" 
+        #passwordRef="ngModel" />
+      <!-- <div *ngFor="let gender of genders">
+        <input [id]="gender"
+          type="radio" 
+          ngModel 
+          name="gender"
+          [value]="gender"
+          #genderRef="ngModel" />
+        <label [attr.for]="gender">{{ gender }}</label>
+      </div> -->
+      <div>
+        <select #selectRef="ngModel" name="gender" [(ngModel)]="genders[0]">
+          <option *ngFor="let gender of genders" [value]="gender">
+            {{ gender }}
+          </option>
+        </select>
+      </div>
+      <div>
+        <p>Output Preview</p>
+        <p>Username: {{ name }}: {{ nameRef.valid }}</p>
+        <p>Password: {{ password }}: {{ passwordRef.valid }}</p>
+        <!-- <p>Gender: {{ gender }}: {{ genderRef.valid }}</p> -->
+      </div>
+      <div *ngIf="nameRef.errors || passwordRef.errors">
+        <p>Output Error</p>
+        <p *ngIf="nameRef.errors?.required">Error: {{ nameRef.errors.required }}</p>
+        <p *ngIf="nameRef.errors?.minlength">Error: Please enter at least {{ nameRef.errors.minlength.requiredLength }} chracters</p>
+        <p *ngIf="nameRef.errors !== null">{{ nameRef.errors | json }}</p>
+        <p *ngIf="passwordRef.errors?.required">Error: {{ passwordRef.errors.required }}</p>
+        <p *ngIf="passwordRef.errors?.minlength">Error: Please enter at least {{ passwordRef.errors.minlength.requiredLength }} chracters</p>
+        <p *ngIf="passwordRef.errors !== null">{{ passwordRef.errors | json }}</p>
+      </div>
+    </fieldset>
+    <button type="submit">Submit</button>
+  </form>
+  
+  <div>
+    <p>Form Data Preview</p>
+    <pre *ngIf="formRef.value">
+      {{ formRef.value | json }}
+    </pre>
+    <p *ngIf="!formRef.valid">
+      {{ formRef.valid | json }}
+    </p>
+  </div>  
+</div>

@@ -1,0 +1,9 @@
+<div>
+  <app-back-button></app-back-button>
+  <form [formGroup]="form">
+    <input type="text" formControlName="firstName" />
+  </form>
+  <pre>
+    {{ form.value | json }}
+  </pre>
+</div>
