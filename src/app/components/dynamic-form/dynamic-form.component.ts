@@ -23,6 +23,8 @@ export class DynamicFormComponent implements OnInit {
       this.fields.push({
         key: prop,
         label: this.formFieldObject[prop].label,
+        options: this.formFieldObject[prop].options,
+        value: this.formFieldObject[prop].value,
         type: this.formFieldObject[prop].type
       });
     }
