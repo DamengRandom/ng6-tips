@@ -17,6 +17,14 @@
               {{ option.label }}
             </label>
           </div>
+          <div class="error" *ngIf="form.get(field.key).errors || form.get(field.key).invalid || form.get(field.key).dirty || form.get(field.key).touched">
+            <div *ngIf="form.get(field.key).errors && form.get(field.key).errors.required">
+              This field is required
+            </div>
+            <div *ngIf="form.get(field.key).errors && form.get(field.key).errors.min">
+              This field must be fulfilled with at least 6 characters
+            </div>
+          </div>
       </div>
     </div>
   </form>
