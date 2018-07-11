@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-dynamic-form',
@@ -19,7 +19,7 @@ export class DynamicFormComponent implements OnInit {
   ngOnInit() {
     const outputObject = {};
     for (const prop of Object.keys(this.formFieldObject)) { // Object.keys means extracting all the object hash keys
-      outputObject[prop] = new FormControl(this.formFieldObject[prop].value);
+      outputObject[prop] = new FormControl(this.formFieldObject[prop].value, this.mapValidator(this.formFieldObject[prop].validators));
       this.fields.push({
         key: prop,
         label: this.formFieldObject[prop].label,
@@ -30,5 +30,17 @@ export class DynamicFormComponent implements OnInit {
     }
     console.log(this.fields);
     this.form = new FormGroup(outputObject);
+  }
+
+  mapValidator(validators) {
+    if (validators) {
+      return Object.keys(validators).map(validatorType => {
+        if (validatorType === 'required') {
+          return Validators.required;
+        } else if (validatorType === 'min') {
+          return Validators.min(validators[validatorType]);
+        }
+      });
+    }
   }
 }
