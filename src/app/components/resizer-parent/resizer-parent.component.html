@@ -1,0 +1,12 @@
+<div>
+  <app-back-button></app-back-button>
+  <!-- <app-resizer [(size)]="fontSizePx" (sizeChange)="fontSizePx = $event"></app-resizer>
+  <div [style.font-size.px]="fontSizePx">
+    Resizeable Text
+  </div> -->
+  <div>
+      <app-resizer [(sizer)]="sizerValue"></app-resizer>
+      <code>{{sizerValue}}</code>
+  </div>
+  <hr>
+</div>
