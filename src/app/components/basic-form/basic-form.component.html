@@ -49,6 +49,7 @@
         <p *ngIf="passwordRef.errors !== null">{{ passwordRef.errors | json }}</p>
       </div>
     </fieldset>
+    <!-- <button type="submit" [disabled]="!formRef.form.valid">Submit</button> -->
     <button type="submit">Submit</button>
   </form>
   

@@ -11,6 +11,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
 import { BackButtonComponent } from './shared/back-button/back-button.component';
 import { DynamicFormParentComponent } from './components/dynamic-form-parent/dynamic-form-parent.component';
+import { ResizerComponent } from './components/resizer/resizer.component';
+import { ResizerParentComponent } from './components/resizer-parent/resizer-parent.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { DynamicFormParentComponent } from './components/dynamic-form-parent/dyn
     DashboardComponent,
     DynamicFormComponent,
     BackButtonComponent,
-    DynamicFormParentComponent
+    DynamicFormParentComponent,
+    ResizerComponent,
+    ResizerParentComponent
   ],
   imports: [
     AppRoutingModule,
