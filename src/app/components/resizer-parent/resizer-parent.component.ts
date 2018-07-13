@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResizerParentComponent implements OnInit {
   sizerValue = 0;
+  writterContent = 'start ..';
 
   constructor() { }
 

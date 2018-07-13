@@ -4,9 +4,13 @@
   <div [style.font-size.px]="fontSizePx">
     Resizeable Text
   </div> -->
-  <div>
-      <app-resizer [(sizer)]="sizerValue"></app-resizer>
-      <code>{{sizerValue}}</code>
+  <!-- <div>
+    <app-resizer [(sizer)]="sizerValue"></app-resizer>
+    <code>{{sizerValue}}</code>
   </div>
-  <hr>
+  <hr> -->
+  <div>
+    <app-resizer [(writter)]="writterContent"></app-resizer>
+    <code>{{ writterContent }}</code>
+  </div>
 </div>

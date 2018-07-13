@@ -4,10 +4,14 @@
   <label [style.font-size.px]="size">FontSize: {{ size }}px</label>
 </div> -->
 
-<div>
+<!-- <div>
   <button (click)="decrement()">-</button>
   <p>{{ sizer }}</p>
   <button (click)="increment()">+</button>
 </div>
 
-<hr>
+<hr> -->
+
+<div>
+  <p id="text" contenteditable="true" (keyup)="startWriting()">{{ writter }}</p>
+</div>
