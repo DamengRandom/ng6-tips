@@ -10,17 +10,26 @@ export class DynamicFormParentComponent implements OnInit {
     firstName: {
       label: 'firstName',
       value: 'Chou',
-      type: 'text'
+      type: 'text',
+      validators: {
+        required: true
+      }
     },
     lastname: {
       label: 'lastName',
       value: 'Dameng',
-      type: 'text'
+      type: 'text',
+      validators: {
+        required: true
+      }
     },
     age: {
       label: 'age',
       value: 29,
-      type: 'number'
+      type: 'number',
+      validators: {
+        min: 18
+      }
     },
     gender: {
       label: 'gender',

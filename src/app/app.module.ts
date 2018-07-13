@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './route/app-routing/app-routing.module';
+import { FormlyModule } from '@ngx-formly/core';
+import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 
 import { AppComponent } from './app.component';
 import { BasicFormComponent } from './components/basic-form/basic-form.component';
@@ -27,7 +29,9 @@ import { ResizerParentComponent } from './components/resizer-parent/resizer-pare
     AppRoutingModule,
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormlyModule.forRoot(),
+    FormlyBootstrapModule
   ],
   providers: [],
   bootstrap: [AppComponent]
