@@ -5,6 +5,7 @@ import { AppRoutingModule } from './route/app-routing/app-routing.module';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 
+// custom components
 import { AppComponent } from './app.component';
 import { BasicFormComponent } from './components/basic-form/basic-form.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -32,6 +33,10 @@ import { ResizerParentComponent } from './components/resizer-parent/resizer-pare
     ReactiveFormsModule,
     FormlyModule.forRoot(),
     FormlyBootstrapModule
+  ],
+  exports: [
+    AppRoutingModule,
+    BackButtonComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

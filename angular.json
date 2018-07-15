@@ -127,5 +127,13 @@
       }
     }
   },
-  "defaultProject": "ng-study01"
+  "defaultProject": "ng-study01",
+  "schematics": {
+    "@schematics/angular": {
+      "component": {
+        "inlineStyle": true,
+        "inlineTemplate": true
+      }
+    }
+  }
 }
