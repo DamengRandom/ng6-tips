@@ -1,0 +1,14 @@
+<div>
+  <app-back-button></app-back-button>
+  <h3 appFirst>Custom Directive</h3>
+  <app-basic [message]="message"></app-basic>
+  <div>
+    <p [appFirst]="readInitialFirstVal"></p>
+  </div>
+  <div>
+    <p>Tracking button behaviours</p>
+    <button appOnline [appTrack]="'button1'">Button 1</button>
+    <button [appTrack]="'button2'">Button 2</button>
+    <button [appTrack]="'button3'">Button 3</button>
+  </div>
+</div>

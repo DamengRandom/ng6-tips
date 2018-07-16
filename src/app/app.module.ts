@@ -13,17 +13,31 @@ import { BackButtonComponent } from './shared/back-button/back-button.component'
 import { DynamicFormParentComponent } from './components/dynamic-form-parent/dynamic-form-parent.component';
 import { ResizerComponent } from './components/resizer/resizer.component';
 import { ResizerParentComponent } from './components/resizer-parent/resizer-parent.component';
+import { BasicCustomComponent,
+  CustomDirective,
+  CustomDirectiveComponent,
+  OnlineOfflineService,
+  OnOffLineDirective,
+  ThreeDirective,
+  TrackDirective,
+  TrackingService } from './components/custom-directive/custom-directive.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    BasicCustomComponent,
     BasicFormComponent,
+    CustomDirectiveComponent,
+    CustomDirective,
     DashboardComponent,
     DynamicFormComponent,
     BackButtonComponent,
     DynamicFormParentComponent,
+    OnOffLineDirective,
     ResizerComponent,
-    ResizerParentComponent
+    ResizerParentComponent,
+    ThreeDirective,
+    TrackDirective
   ],
   imports: [
     AppRoutingModule,
@@ -33,7 +47,7 @@ import { ResizerParentComponent } from './components/resizer-parent/resizer-pare
     FormlyModule.forRoot(),
     FormlyBootstrapModule
   ],
-  providers: [],
+  providers: [OnlineOfflineService, TrackingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
