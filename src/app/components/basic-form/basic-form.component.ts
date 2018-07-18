@@ -17,11 +17,11 @@ export class BasicFormComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngOnInit() {
-    console.log("form data? ", this.form);
+    console.log('form data? ', this.form);
   }
 
   onSubmit(submitData) {
-    console.log("Is form valid? ", this.form.form.valid);
+    console.log('Is form valid? ', this.form.form.valid);
     console.log('Submitted: ', submitData);
   }
 
