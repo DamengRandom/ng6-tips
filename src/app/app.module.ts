@@ -13,6 +13,7 @@ import { BackButtonComponent } from './shared/back-button/back-button.component'
 import { DynamicFormParentComponent } from './components/dynamic-form-parent/dynamic-form-parent.component';
 import { ResizerComponent } from './components/resizer/resizer.component';
 import { ResizerParentComponent } from './components/resizer-parent/resizer-parent.component';
+import { SearchDemoComponent } from './components/search-demo/search-demo.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ResizerParentComponent } from './components/resizer-parent/resizer-pare
     BackButtonComponent,
     DynamicFormParentComponent,
     ResizerComponent,
-    ResizerParentComponent
+    ResizerParentComponent,
+    SearchDemoComponent
   ],
   imports: [
     AppRoutingModule,
