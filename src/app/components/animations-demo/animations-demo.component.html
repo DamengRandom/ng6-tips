@@ -1,0 +1,11 @@
+<div>
+  <app-back-button></app-back-button>
+  <section>
+    <!-- trigger animation is [@signal] and go is animation name  -->
+    <div *ngIf="isToggled" [@signal]="signal"
+      class="traffic-light"></div>
+      <button (click)="onGoClick()">Go</button>
+      <button (click)="onStopClick()">Stop</button>
+      <button (click)="toggleShowHide()">Toggle</button>
+  </section>
+</div>
