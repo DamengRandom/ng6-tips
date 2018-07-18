@@ -1,9 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './route/app-routing/app-routing.module';
-import { FormlyModule } from '@ngx-formly/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
+import { FormlyModule } from '@ngx-formly/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BasicFormComponent } from './components/basic-form/basic-form.component';
@@ -30,10 +31,11 @@ import { SearchDemoComponent } from './components/search-demo/search-demo.compon
   imports: [
     AppRoutingModule,
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
+    FormlyBootstrapModule,
     FormlyModule.forRoot(),
-    FormlyBootstrapModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
