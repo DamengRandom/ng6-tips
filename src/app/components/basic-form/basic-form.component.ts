@@ -21,7 +21,7 @@ export class BasicFormComponent implements OnInit, AfterViewInit {
   }
 
   onSubmit(submitData) {
-    console.log('Is form valid? ', this.form.form.valid);
+    console.log('Is form valid?', this.form.form.valid);
     console.log('Submitted: ', submitData);
   }
 
