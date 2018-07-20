@@ -1,0 +1,13 @@
+<div>
+  <p>
+    {{ astronauts }}: <strong>{{ mission }}</strong>
+    <button (click)="confirm()"
+      [disabled]="!announced || confirmed">Confirmed</button>
+  </p>
+</div>
+
+<div>
+  <div id="messageBox" contenteditable="true" (keyup)="writeMessage()"></div>
+  <button (click)="sendMessage()">Send Message</button>
+  <button (click)="clearMessage()">Clear Message</button>
+</div>

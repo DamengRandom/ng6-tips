@@ -15,6 +15,9 @@ import { DynamicFormParentComponent } from './components/dynamic-form-parent/dyn
 import { ResizerComponent } from './components/resizer/resizer.component';
 import { ResizerParentComponent } from './components/resizer-parent/resizer-parent.component';
 import { SearchDemoComponent } from './components/search-demo/search-demo.component';
+import { AnimationsDemoComponent } from './components/animations-demo/animations-demo.component';
+import { MissionControlComponent } from './components/mission-control/mission-control.component';
+import { AstronautComponent } from './components/astronaut/astronaut.component';
 
 @NgModule({
   declarations: [
@@ -27,9 +30,13 @@ import { SearchDemoComponent } from './components/search-demo/search-demo.compon
     ResizerComponent,
     ResizerParentComponent,
     SearchDemoComponent
+    AnimationsDemoComponent,
+    MissionControlComponent,
+    AstronautComponent
   ],
   imports: [
     AppRoutingModule,
+    BrowserAnimationsModule,
     BrowserModule,
     FormlyBootstrapModule,
     FormlyModule.forRoot(),
