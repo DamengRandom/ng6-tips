@@ -1,9 +1,9 @@
 import { AppRoutingModule } from './route/app-routing/app-routing.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormlyModule } from '@ngx-formly/core';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
+import { FormlyModule } from '@ngx-formly/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -14,7 +14,10 @@ import { BackButtonComponent } from './shared/back-button/back-button.component'
 import { DynamicFormParentComponent } from './components/dynamic-form-parent/dynamic-form-parent.component';
 import { ResizerComponent } from './components/resizer/resizer.component';
 import { ResizerParentComponent } from './components/resizer-parent/resizer-parent.component';
+import { SearchDemoComponent } from './components/search-demo/search-demo.component';
 import { AnimationsDemoComponent } from './components/animations-demo/animations-demo.component';
+import { MissionControlComponent } from './components/mission-control/mission-control.component';
+import { AstronautComponent } from './components/astronaut/astronaut.component';
 
 @NgModule({
   declarations: [
@@ -26,16 +29,20 @@ import { AnimationsDemoComponent } from './components/animations-demo/animations
     DynamicFormParentComponent,
     ResizerComponent,
     ResizerParentComponent,
-    AnimationsDemoComponent
+    SearchDemoComponent
+    AnimationsDemoComponent,
+    MissionControlComponent,
+    AstronautComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
+    FormlyBootstrapModule,
     FormlyModule.forRoot(),
-    FormlyBootstrapModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   exports: [
     BackButtonComponent
