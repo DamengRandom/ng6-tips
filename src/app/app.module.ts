@@ -1,4 +1,5 @@
 import { AppRoutingModule } from './route/app-routing/app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 import { FormlyModule } from '@ngx-formly/core';
@@ -29,7 +30,7 @@ import { AstronautComponent } from './components/astronaut/astronaut.component';
     DynamicFormParentComponent,
     ResizerComponent,
     ResizerParentComponent,
-    SearchDemoComponent
+    SearchDemoComponent,
     AnimationsDemoComponent,
     MissionControlComponent,
     AstronautComponent

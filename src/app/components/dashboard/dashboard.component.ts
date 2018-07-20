@@ -11,7 +11,9 @@ export class DashboardComponent implements OnInit {
     { url: '/basic-form', content: 'Basic Form' },
     { url: '/customers-demo', content: 'Lazy Load Route' },
     { url: '/dynamic-form', content: 'Dynamic Form' },
-    { url: '/resize', content: 'Resize' }
+    { url: '/mission', content: 'Mission' },
+    { url: '/resize', content: 'Resize' },
+    { url: '/search-demo', content: 'Search Component Demo' }
   ];
   constructor() { }
 
