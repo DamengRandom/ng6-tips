@@ -37,6 +37,9 @@ import { AnimationsDemoComponent } from './components/animations-demo/animations
     FormlyModule.forRoot(),
     FormlyBootstrapModule
   ],
+  exports: [
+    BackButtonComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

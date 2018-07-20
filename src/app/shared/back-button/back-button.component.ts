@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { Location } from '@angular/common';
+
+@Injectable()
 
 @Component({
   selector: 'app-back-button',

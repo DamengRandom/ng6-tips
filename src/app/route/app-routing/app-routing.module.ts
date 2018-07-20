@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: 'animations', component: AnimationsDemoComponent },
   { path: 'basic-form', component: BasicFormComponent },
+  { path: 'customers-demo', loadChildren: '../../../app/modules/customers-lazy-load/customers-lazy-load.module#CustomersLazyLoadModule' },
   { path: 'dynamic-form', component: DynamicFormParentComponent },
   { path: 'resize', component: ResizerParentComponent }
 ];
