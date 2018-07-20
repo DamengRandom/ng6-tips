@@ -44,6 +44,9 @@ import { AstronautComponent } from './components/astronaut/astronaut.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
+  exports: [
+    BackButtonComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
