@@ -7,6 +7,7 @@ import { AnimationsDemoComponent } from '../../components/animations-demo/animat
 import { BasicFormComponent } from '../../components/basic-form/basic-form.component';
 import { DashboardComponent } from '../../components/dashboard/dashboard.component';
 import { DynamicFormParentComponent } from '../../components/dynamic-form-parent/dynamic-form-parent.component';
+import { MissionControlComponent } from '../../components/mission-control/mission-control.component';
 import { ResizerParentComponent } from '../../components/resizer-parent/resizer-parent.component';
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'animations', component: AnimationsDemoComponent },
   { path: 'basic-form', component: BasicFormComponent },
   { path: 'dynamic-form', component: DynamicFormParentComponent },
+  { path: 'mission', component: MissionControlComponent },
   { path: 'resize', component: ResizerParentComponent }
 ];
 

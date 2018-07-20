@@ -15,6 +15,8 @@ import { DynamicFormParentComponent } from './components/dynamic-form-parent/dyn
 import { ResizerComponent } from './components/resizer/resizer.component';
 import { ResizerParentComponent } from './components/resizer-parent/resizer-parent.component';
 import { AnimationsDemoComponent } from './components/animations-demo/animations-demo.component';
+import { MissionControlComponent } from './components/mission-control/mission-control.component';
+import { AstronautComponent } from './components/astronaut/astronaut.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { AnimationsDemoComponent } from './components/animations-demo/animations
     DynamicFormParentComponent,
     ResizerComponent,
     ResizerParentComponent,
-    AnimationsDemoComponent
+    AnimationsDemoComponent,
+    MissionControlComponent,
+    AstronautComponent
   ],
   imports: [
     AppRoutingModule,
