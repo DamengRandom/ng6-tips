@@ -1,4 +1,5 @@
 import { AppRoutingModule } from './route/app-routing/app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 import { FormlyModule } from '@ngx-formly/core';
@@ -15,6 +16,9 @@ import { DynamicFormParentComponent } from './components/dynamic-form-parent/dyn
 import { ResizerComponent } from './components/resizer/resizer.component';
 import { ResizerParentComponent } from './components/resizer-parent/resizer-parent.component';
 import { SearchDemoComponent } from './components/search-demo/search-demo.component';
+import { AnimationsDemoComponent } from './components/animations-demo/animations-demo.component';
+import { MissionControlComponent } from './components/mission-control/mission-control.component';
+import { AstronautComponent } from './components/astronaut/astronaut.component';
 
 @NgModule({
   declarations: [
@@ -26,16 +30,23 @@ import { SearchDemoComponent } from './components/search-demo/search-demo.compon
     DynamicFormParentComponent,
     ResizerComponent,
     ResizerParentComponent,
-    SearchDemoComponent
+    SearchDemoComponent,
+    AnimationsDemoComponent,
+    MissionControlComponent,
+    AstronautComponent
   ],
   imports: [
     AppRoutingModule,
+    BrowserAnimationsModule,
     BrowserModule,
     FormlyBootstrapModule,
     FormlyModule.forRoot(),
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule
+  ],
+  exports: [
+    BackButtonComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
