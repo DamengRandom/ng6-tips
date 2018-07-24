@@ -1,0 +1,5 @@
+<div>
+  <h4>Is that true? Like always?</h4>
+  <p>Agreed: {{ agreed }}, Disagreed: {{ disagreed }}</p>
+  <app-child *ngFor="let voter of voters" [name]="voter" (voted)="onVoted($event)"></app-child>
+</div>

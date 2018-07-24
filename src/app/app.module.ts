@@ -19,6 +19,9 @@ import { SearchDemoComponent } from './components/search-demo/search-demo.compon
 import { AnimationsDemoComponent } from './components/animations-demo/animations-demo.component';
 import { MissionControlComponent } from './components/mission-control/mission-control.component';
 import { AstronautComponent } from './components/astronaut/astronaut.component';
+import { OutputDemoComponent } from './components/output-demo/output-demo.component';
+import { ParentComponent } from './components/output-demo/parent/parent.component';
+import { ChildComponent } from './components/output-demo/child/child.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { AstronautComponent } from './components/astronaut/astronaut.component';
     SearchDemoComponent,
     AnimationsDemoComponent,
     MissionControlComponent,
-    AstronautComponent
+    AstronautComponent,
+    OutputDemoComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     AppRoutingModule,
