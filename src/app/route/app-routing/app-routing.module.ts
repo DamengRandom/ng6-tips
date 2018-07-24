@@ -8,6 +8,7 @@ import { BasicFormComponent } from '../../components/basic-form/basic-form.compo
 import { DashboardComponent } from '../../components/dashboard/dashboard.component';
 import { DynamicFormParentComponent } from '../../components/dynamic-form-parent/dynamic-form-parent.component';
 import { MissionControlComponent } from '../../components/mission-control/mission-control.component';
+import { OutputDemoComponent } from '../../components/output-demo/output-demo.component';
 import { ResizerParentComponent } from '../../components/resizer-parent/resizer-parent.component';
 import { SearchDemoComponent } from '../../components/search-demo/search-demo.component';
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'dynamic-form', component: DynamicFormParentComponent },
   { path: 'search-demo', component: SearchDemoComponent },
   { path: 'mission', component: MissionControlComponent },
+  { path: 'output-demo', component: OutputDemoComponent },
   { path: 'resize', component: ResizerParentComponent }
 ];
 
