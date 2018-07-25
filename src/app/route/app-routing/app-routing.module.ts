@@ -10,6 +10,7 @@ import { DynamicFormParentComponent } from '../../components/dynamic-form-parent
 import { MissionControlComponent } from '../../components/mission-control/mission-control.component';
 import { OutputDemoComponent } from '../../components/output-demo/output-demo.component';
 import { ResizerParentComponent } from '../../components/resizer-parent/resizer-parent.component';
+import { RxjsTrialsComponent } from '../../components/rxjs-trials/rxjs-trials.component';
 import { SearchDemoComponent } from '../../components/search-demo/search-demo.component';
 
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'search-demo', component: SearchDemoComponent },
   { path: 'mission', component: MissionControlComponent },
   { path: 'output-demo', component: OutputDemoComponent },
-  { path: 'resize', component: ResizerParentComponent }
+  { path: 'resize', component: ResizerParentComponent },
+  { path: 'rxjs-trial', component: RxjsTrialsComponent },
 ];
 
 @NgModule({
