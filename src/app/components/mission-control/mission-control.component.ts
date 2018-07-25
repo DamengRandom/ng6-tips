@@ -32,7 +32,6 @@ export class MissionControlComponent implements OnInit, OnDestroy {
       console.log('messagesssssss: ', message);
       this.message = message.text;
     });
-    
   }
 
   ngOnInit() {
@@ -40,10 +39,10 @@ export class MissionControlComponent implements OnInit, OnDestroy {
   }
 
   announce() {
-    let mission = this.missions[this.nextMission++];
+    const mission = this.missions[this.nextMission++];
     this.missionDemoService.announceMission(mission);
     this.history.push(`Mission "${mission}" announced`);
-    if(this.nextMission >= this.missions.length) { this.nextMission = 0; }
+    if (this.nextMission >= this.missions.length) { this.nextMission = 0; }
   }
 
   ngOnDestroy() {

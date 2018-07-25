@@ -10,6 +10,7 @@ export class DashboardComponent implements OnInit {
     { url: '/animations', content: 'Animations' },
     { url: '/basic-form', content: 'Basic Form' },
     { url: '/customers-demo', content: 'Lazy Load Route' },
+    { url: '/custom-pipe-demo', content: 'Custom Pipe Demo' },
     { url: '/dynamic-form', content: 'Dynamic Form' },
     { url: '/mission', content: 'Mission' },
     { url: '/output-demo', content: 'Output Demo' },

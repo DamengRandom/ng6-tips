@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 // components
 import { AnimationsDemoComponent } from '../../components/animations-demo/animations-demo.component';
 import { BasicFormComponent } from '../../components/basic-form/basic-form.component';
+import { CustomPipeDemoComponent } from '../../components/custom-pipe-demo/custom-pipe-demo.component';
 import { DashboardComponent } from '../../components/dashboard/dashboard.component';
 import { DynamicFormParentComponent } from '../../components/dynamic-form-parent/dynamic-form-parent.component';
 import { MissionControlComponent } from '../../components/mission-control/mission-control.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'animations', component: AnimationsDemoComponent },
   { path: 'basic-form', component: BasicFormComponent },
   { path: 'customers-demo', loadChildren: '../../../app/modules/customers-lazy-load/customers-lazy-load.module#CustomersLazyLoadModule' },
+  { path: 'custom-pipe-demo', component: CustomPipeDemoComponent },
   { path: 'dynamic-form', component: DynamicFormParentComponent },
   { path: 'search-demo', component: SearchDemoComponent },
   { path: 'mission', component: MissionControlComponent },
