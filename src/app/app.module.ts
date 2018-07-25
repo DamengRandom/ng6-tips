@@ -22,6 +22,7 @@ import { AstronautComponent } from './components/astronaut/astronaut.component';
 import { OutputDemoComponent } from './components/output-demo/output-demo.component';
 import { ParentComponent } from './components/output-demo/parent/parent.component';
 import { ChildComponent } from './components/output-demo/child/child.component';
+import { RxjsTrialsComponent } from './components/rxjs-trials/rxjs-trials.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ChildComponent } from './components/output-demo/child/child.component';
     AstronautComponent,
     OutputDemoComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    RxjsTrialsComponent
   ],
   imports: [
     AppRoutingModule,
