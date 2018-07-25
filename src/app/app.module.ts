@@ -22,6 +22,7 @@ import { OutputDemoComponent } from './components/output-demo/output-demo.compon
 import { ParentComponent } from './components/output-demo/parent/parent.component';
 import { ResizerComponent } from './components/resizer/resizer.component';
 import { ResizerParentComponent } from './components/resizer-parent/resizer-parent.component';
+import { RxjsTrialsComponent } from './components/rxjs-trials/rxjs-trials.component';
 import { SearchDemoComponent } from './components/search-demo/search-demo.component';
 
 // pipe
@@ -29,23 +30,25 @@ import { FileSizePipe } from './shared/pipes/file-size.pipe';
 
 @NgModule({
   declarations: [
+    AnimationsDemoComponent,
     AppComponent,
+
+    AstronautComponent,
     BasicFormComponent,
+    ChildComponent,
+    CustomPipeDemoComponent,
     DashboardComponent,
     DynamicFormComponent,
     BackButtonComponent,
     DynamicFormParentComponent,
-    ResizerComponent,
-    ResizerParentComponent,
-    SearchDemoComponent,
-    AnimationsDemoComponent,
+    FileSizePipe,
     MissionControlComponent,
-    AstronautComponent,
     OutputDemoComponent,
     ParentComponent,
-    ChildComponent,
-    CustomPipeDemoComponent,
-    FileSizePipe
+    ResizerComponent,
+    ResizerParentComponent,
+    RxjsTrialsComponent,
+    SearchDemoComponent,
   ],
   imports: [
     AppRoutingModule,
