@@ -18,6 +18,7 @@ import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.com
 import { BackButtonComponent } from './shared/back-button/back-button.component';
 import { DynamicFormParentComponent } from './components/dynamic-form-parent/dynamic-form-parent.component';
 import { MissionControlComponent } from './components/mission-control/mission-control.component';
+import { ObservableSampleOneComponent } from './components/observable-sample-one/observable-sample-one.component';
 import { OutputDemoComponent } from './components/output-demo/output-demo.component';
 import { ParentComponent } from './components/output-demo/parent/parent.component';
 import { ResizerComponent } from './components/resizer/resizer.component';
@@ -32,7 +33,6 @@ import { FileSizePipe } from './shared/pipes/file-size.pipe';
   declarations: [
     AnimationsDemoComponent,
     AppComponent,
-
     AstronautComponent,
     BasicFormComponent,
     ChildComponent,
@@ -43,12 +43,14 @@ import { FileSizePipe } from './shared/pipes/file-size.pipe';
     DynamicFormParentComponent,
     FileSizePipe,
     MissionControlComponent,
+    ObservableSampleOneComponent,
     OutputDemoComponent,
     ParentComponent,
     ResizerComponent,
     ResizerParentComponent,
     RxjsTrialsComponent,
     SearchDemoComponent,
+    ObservableSampleOneComponent,
   ],
   imports: [
     AppRoutingModule,

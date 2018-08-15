@@ -8,13 +8,15 @@ import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 export class ResizerComponent implements OnInit {
   // @Input() size: number | string;
   // @Output() sizeChange = new EventEmitter<number>();
-  
+
   // constructor() { }
+
+  writterContent = '';
+  @Output() writterChange = new EventEmitter();
 
   ngOnInit() {
   }
 
-  
   // sizerValue = 0;
 
   // get sizer() {
@@ -53,10 +55,6 @@ export class ResizerComponent implements OnInit {
   //   this.sizeChange.emit(this.size);
   // }
 
-  writterContent = '';
-
-  @Output() writterChange = new EventEmitter();
-
   @Input()
   get writter() {
     return this.writterContent;
@@ -68,8 +66,8 @@ export class ResizerComponent implements OnInit {
 
   startWriting() {
     // this.writter += this.writter;
-    let text = document.getElementById('text').innerHTML;
+    const text = document.getElementById('text').innerHTML;
     this.writter = text;
-    console.log("updates? ", this.writter);
+    console.log('updates? ', this.writter);
   }
 }
