@@ -12,15 +12,13 @@ import 'rxjs/add/operator/map';
 export class SearchDemoComponent implements OnInit {
   results: any;
   searchTerm$ = new Subject<String>();
-  constructor(private wikipediaSearchService: WikipediaSearchService) {
+  constructor(private wikipediaSearchService: WikipediaSearchService) {}
+
+  ngOnInit() {
     this.wikipediaSearchService.search(this.searchTerm$)
       .subscribe(returns => {
         console.log('results: ', returns['results']);
         this.results = returns['results'];
       });
   }
-
-  ngOnInit() {
-  }
-
 }

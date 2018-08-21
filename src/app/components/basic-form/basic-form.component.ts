@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { Observable, combineLatest } from 'rxjs';
-import { filter } from 'rxjs/operators';
+import { combineLatest } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-basic-form',
@@ -36,6 +36,9 @@ export class BasicFormComponent implements OnInit, AfterViewInit {
       this.form.valueChanges,
       this.form.statusChanges, (status, value) => ({status, value}))
         // .pipe(filter(({ status }) => status === 'VALID'))
+        // .pipe(
+        //   map(value => console.table(value))
+        // );
         .subscribe(value => console.table(value));
   }
 }

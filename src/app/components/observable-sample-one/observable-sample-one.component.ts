@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from '../../../../node_modules/rxjs';
+import { Observable, of } from '../../../../node_modules/rxjs';
+import { ajax } from 'rxjs/ajax';
+import { map, catchError } from '../../../../node_modules/rxjs/operators';
 
 @Component({
   selector: 'app-observable-sample-one',
@@ -7,7 +9,7 @@ import { Observable } from '../../../../node_modules/rxjs';
   styleUrls: ['./observable-sample-one.component.scss']
 })
 export class ObservableSampleOneComponent implements OnInit {
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     // const locations = new Observable((observer) => {
@@ -99,6 +101,66 @@ export class ObservableSampleOneComponent implements OnInit {
 
 
 
-    // example 3:
+    // example 3: custom from event observble function
+    function formEvent(target, eventName) {
+      return new Observable((observer) => {
+        const handler = (e) => observer.next(e);
+
+        target.addEventListener(eventName, handler);
+
+        return () => {
+          target.removeEventListener(eventName, handler);
+        };
+      });
+    }
+
+    // custom from event observble function implementation
+    const KEY_ESC = 27;
+    const targetInputDOM = document.getElementById('name') as HTMLInputElement;
+    const subscription = formEvent(targetInputDOM, 'keydown').subscribe((e: KeyboardEvent) => {
+      if (e.keyCode === KEY_ESC) {
+        targetInputDOM.value = '';
+      }
+    });
+
+
+    // example 5: ajax observable
+    const mockData = ajax('https://jsonplaceholder.typicode.com/posts/10');
+    // const formattedData = mockData.pipe(
+    //   map((res) => {
+    //     if (!res.response) {
+    //       console.log('run here? ');
+    //       throw new Error('no data returned ..');
+    //     }
+    //     console.log('return? ', res.response);
+    //     return res.response;
+    //   }),
+    //   catchError(err => of(err))
+    // );
+
+    // formattedData.subscribe({
+    mockData.subscribe({
+      next(data) {
+        console.log('data: ', data);
+      },
+      error(err) {
+        console.log('err: ', err);
+      }
+    });
+    // const mockData = ajax('https://jsonplaceholder.typicode.com/todos/');
+    // mockData.subscribe((data) => console.log('ajax observable data: ', data.response));
+
+
+    // example 6: search switchMap() demo
+
+
+
+    // tiny callback example: when user clicks cbFunc DOM element, then trigger the callback function cbExample
+    document.getElementById('cbFunc').addEventListener('click', this.cbExample);
+  }
+
+  cbExample() {
+    console.log('called?');
+    document.getElementById('cbDemo').innerHTML = 'wahahhaa';
   }
 }

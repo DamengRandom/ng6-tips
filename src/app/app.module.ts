@@ -6,6 +6,8 @@ import { FormlyModule } from '@ngx-formly/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { NgxMasonryModule } from 'ngx-masonry';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 import { AnimationsDemoComponent } from './components/animations-demo/animations-demo.component';
 import { AppComponent } from './app.component';
@@ -19,6 +21,8 @@ import { BackButtonComponent } from './shared/back-button/back-button.component'
 import { DynamicFormParentComponent } from './components/dynamic-form-parent/dynamic-form-parent.component';
 import { MissionControlComponent } from './components/mission-control/mission-control.component';
 import { ObservableSampleOneComponent } from './components/observable-sample-one/observable-sample-one.component';
+import { ObservableSampleTwoComponent } from './components/observable-sample-two/observable-sample-two.component';
+import { ObservableHttpSampleComponent } from './components/observable-http-sample/observable-http-sample.component';
 import { OutputDemoComponent } from './components/output-demo/output-demo.component';
 import { ParentComponent } from './components/output-demo/parent/parent.component';
 import { ResizerComponent } from './components/resizer/resizer.component';
@@ -44,13 +48,14 @@ import { FileSizePipe } from './shared/pipes/file-size.pipe';
     FileSizePipe,
     MissionControlComponent,
     ObservableSampleOneComponent,
+    ObservableSampleTwoComponent,
+    ObservableHttpSampleComponent,
     OutputDemoComponent,
     ParentComponent,
     ResizerComponent,
     ResizerParentComponent,
     RxjsTrialsComponent,
     SearchDemoComponent,
-    ObservableSampleOneComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -60,7 +65,9 @@ import { FileSizePipe } from './shared/pipes/file-size.pipe';
     FormlyModule.forRoot(),
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMasonryModule,
+    InfiniteScrollModule
   ],
   exports: [
     BackButtonComponent
