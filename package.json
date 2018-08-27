@@ -9,6 +9,11 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "ng lint && ng build"
+    }
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^6.0.3",
@@ -23,6 +28,8 @@
     "@ngx-formly/bootstrap": "^4.6.3",
     "@ngx-formly/core": "^4.6.3",
     "core-js": "^2.5.4",
+    "ngx-infinite-scroll": "^6.0.1",
+    "ngx-masonry": "^1.1.2",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.2.1",
     "zone.js": "^0.8.26"
@@ -36,14 +43,15 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.2.1",
+    "husky": "^1.0.0-rc.13",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~1.7.1",
+    "karma": "^3.0.0",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "~2.0.0",
     "karma-jasmine": "~1.1.1",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "protractor": "~5.3.0",
+    "protractor": "^5.4.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
     "typescript": "~2.7.2"

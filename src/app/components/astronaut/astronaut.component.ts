@@ -14,17 +14,17 @@ export class AstronautComponent implements OnDestroy {
   @Input() astronaut: string;
   mission = '<no mission announced>';
   confirmed = false;
-  announced = false; 
-  subscription: Subscription; 
+  announced = false;
+  subscription: Subscription;
 
-  messageContent: string = '';
+  messageContent: string;
 
   constructor(private messageDemoService: MessageDemoService,
     private missionDemoService: MissionDemoService) {
     this.subscription = missionDemoService.missionAnnounced$.subscribe(mission => {
       this.mission = mission;
       this.announced = true;
-      this.confirmed = false; 
+      this.confirmed = false;
     });
   }
 
@@ -34,7 +34,7 @@ export class AstronautComponent implements OnDestroy {
   }
 
   writeMessage() {
-    let mb = document.getElementById('messageBox');
+    const mb = document.getElementById('messageBox');
     mb.addEventListener('input', () => {
       this.messageContent = mb.innerHTML;
       console.log('mb.innerHTML ', mb.innerHTML);

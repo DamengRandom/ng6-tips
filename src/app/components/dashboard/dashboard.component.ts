@@ -13,6 +13,9 @@ export class DashboardComponent implements OnInit {
     { url: '/custom-pipe-demo', content: 'Custom Pipe Demo' },
     { url: '/dynamic-form', content: 'Dynamic Form' },
     { url: '/mission', content: 'Mission' },
+    { url: '/obsr-http-sample', content: 'Http Observable Sample' },
+    { url: '/obsr-sample', content: 'Observable Sample One' },
+    { url: '/obsr-sample-two', content: 'Observable Sample Two' },
     { url: '/output-demo', content: 'Output Demo' },
     { url: '/resize', content: 'Resize' },
     { url: '/rxjs-trial', content: 'Rxjs Trial' },
@@ -22,5 +25,4 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

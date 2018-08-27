@@ -1,0 +1,15 @@
+<div>
+  <app-back-button></app-back-button>
+  <div>
+    <p>(Observable) simple search demo:</p>
+    <i>the function can be triggered when subject,.next() run</i>
+  </div>
+  <div>
+    <input (keyup)="searchTerm$.next($event.target.value)" />
+    <ul *ngIf="results">
+      <li *ngFor="let result of results | slice:0:9">
+        <a href="{{ result.latest }}" target="_blank">{{ result.name }}</a>
+      </li>
+    </ul>
+  </div>
+</div>
