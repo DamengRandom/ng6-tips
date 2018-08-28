@@ -1,12 +1,17 @@
 <div>
     <app-back-button></app-back-button>
-    <ngx-masonry>
-      <ngxMasonryItem style="width: 180px;" *ngFor="let foto of fotos | slice:0:100">
-        <div style="min-height: 240px;">
-          <h4 [innerHTML]="foto.title"></h4>
-          <img [src]="foto.thumbnailUrl" [alt]="foto.id"/>
-        </div>
-      </ngxMasonryItem>
-    </ngx-masonry>
+    <div infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="50"
+      (scrolled)="onScrollDown()">
+      <ngx-masonry>
+          <ngxMasonryItem style="width: 180px;" *ngFor="let foto of fotos">
+            <div style="min-height: 240px;">
+              <h4 [innerHTML]="foto.title"></h4>
+              <img [src]="foto.thumbnailUrl" [alt]="foto.id"/>
+            </div>
+          </ngxMasonryItem>
+        </ngx-masonry>
+    </div>
     <div *ngIf="errorMessage" [innerHTML]="errorMessage"></div>
 </div>

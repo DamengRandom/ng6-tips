@@ -12,6 +12,11 @@ import { SamplesApiDemoService } from '../../services/samples-api-demo.service';
 export class ObservableHttpSampleComponent implements OnInit {
   private errorMessage: String;
   fotos = [];
+  originalFetch = [];
+  scrollFetch = [];
+  newFetchsSize = 100;
+  isFinished = false;
+
   constructor(private samplesApiDemoService: SamplesApiDemoService) {}
 
   ngOnInit() {
@@ -22,8 +27,9 @@ export class ObservableHttpSampleComponent implements OnInit {
     this.samplesApiDemoService.getSamples()
       .subscribe(
         data => {
-          this.fotos = data;
-          console.log('data: ', this.fotos);
+          this.originalFetch = data;
+          this.fotos = data.slice(0, 20);
+          console.log('data: ', this.originalFetch, this.fotos);
         },
         error => {
           this.errorMessage = error;
@@ -32,7 +38,13 @@ export class ObservableHttpSampleComponent implements OnInit {
       );
   }
 
-  onScrollDown(ev) {
-    console.log('scrolled down!!', ev);
+  onScrollDown() {
+    console.log('scrolled down!!');
+    if (this.fotos.length < this.originalFetch.length) {
+      const currentLength = this.fotos.length;
+      for (let i = currentLength; i < currentLength + this.newFetchsSize; i++) {
+        this.fotos.push(this.originalFetch[i]);
+      }
+    }
   }
 }

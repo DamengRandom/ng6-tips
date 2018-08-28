@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: 'animations', component: AnimationsDemoComponent },
   { path: 'basic-form', component: BasicFormComponent },
   { path: 'customers-demo', loadChildren: '../../../app/modules/customers-lazy-load/customers-lazy-load.module#CustomersLazyLoadModule' },
+  { path: 'lazy-loading-demo', loadChildren: '../../../app/modules/lazy-loading-demo/lazy-loading-demo.module#LazyLoadingDemoModule' },
   { path: 'custom-pipe-demo', component: CustomPipeDemoComponent },
   { path: 'dynamic-form', component: DynamicFormParentComponent },
   { path: 'search-demo', component: SearchDemoComponent },
