@@ -19,7 +19,8 @@ export class DashboardComponent implements OnInit {
     { url: '/output-demo', content: 'Output Demo' },
     { url: '/resize', content: 'Resize' },
     { url: '/rxjs-trial', content: 'Rxjs Trial' },
-    { url: '/search-demo', content: 'Search Component Demo' }
+    { url: '/search-demo', content: 'Search Component Demo' },
+    { url: '/lazy-loading-demo', content: 'Lazy Loading Demo' }
   ];
   constructor() { }
 
