@@ -1,25 +1,24 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+let major = 0;
+let minor = 0;
 
-import { LazyParentComponent } from './lazy-parent.component';
+function mainVersion(param) {
+  major = major + param;
+  minor = 0;
+  return `${major}.${minor}`;
+}
 
-describe('LazyParentComponent', () => {
-  let component: LazyParentComponent;
-  let fixture: ComponentFixture<LazyParentComponent>;
+function miniVersion(param) {
+  return minor = minor + param;
+}
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ LazyParentComponent ]
-    })
-    .compileComponents();
-  }));
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(LazyParentComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+describe('version changes', () => {
+  it('Should update major or minor verison number', () => {
+    expect(mainVersion(1)).toEqual('1.0');
+    expect(miniVersion(1)).toEqual(1);
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('Should not add string as a version number', () => {
+    expect(mainVersion('1')).not.toEqual('1.0');
+    expect(miniVersion('1')).toEqual('01');
   });
 });
