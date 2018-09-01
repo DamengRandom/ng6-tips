@@ -32,6 +32,7 @@ import { SearchDemoComponent } from './components/search-demo/search-demo.compon
 
 // pipe
 import { FileSizePipe } from './shared/pipes/file-size.pipe';
+import { VanillaDemoComponent } from './components/vanilla-demo/vanilla-demo.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { FileSizePipe } from './shared/pipes/file-size.pipe';
     ResizerParentComponent,
     RxjsTrialsComponent,
     SearchDemoComponent,
+    VanillaDemoComponent,
   ],
   imports: [
     AppRoutingModule,
