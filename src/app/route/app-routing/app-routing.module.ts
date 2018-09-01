@@ -16,6 +16,7 @@ import { OutputDemoComponent } from '../../components/output-demo/output-demo.co
 import { ResizerParentComponent } from '../../components/resizer-parent/resizer-parent.component';
 import { RxjsTrialsComponent } from '../../components/rxjs-trials/rxjs-trials.component';
 import { SearchDemoComponent } from '../../components/search-demo/search-demo.component';
+import { VanillaDemoComponent } from '../../components/vanilla-demo/vanilla-demo.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: 'output-demo', component: OutputDemoComponent },
   { path: 'resize', component: ResizerParentComponent },
   { path: 'rxjs-trial', component: RxjsTrialsComponent },
+  { path: 'vanilla-demo', component: VanillaDemoComponent }
 ];
 
 @NgModule({

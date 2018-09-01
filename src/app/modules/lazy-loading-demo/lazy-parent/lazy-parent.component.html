@@ -1,4 +1,8 @@
 <div>
   <p>Lazy Loading Parent Component (Inside Module)</p>
-  <app-lazy-child></app-lazy-child>
+  <hr>
+  <p>Source version controller</p>
+  <button (click)="newMinor()">New Minor Version</button>
+  <button (click)="newMajor()">New Major Version</button>
+  <app-lazy-child [major]="major" [minor]="minor"></app-lazy-child>
 </div>

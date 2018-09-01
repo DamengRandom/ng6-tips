@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BackButtonComponent } from './back-button.component';
+import { VanillaDemoComponent } from './vanilla-demo.component';
 
-describe('BackButtonComponent', () => {
-  let component: BackButtonComponent;
-  let fixture: ComponentFixture<BackButtonComponent>;
+describe('VanillaDemoComponent', () => {
+  let component: VanillaDemoComponent;
+  let fixture: ComponentFixture<VanillaDemoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BackButtonComponent ]
+      declarations: [ VanillaDemoComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BackButtonComponent);
+    fixture = TestBed.createComponent(VanillaDemoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
