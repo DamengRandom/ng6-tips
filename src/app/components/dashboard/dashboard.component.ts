@@ -9,6 +9,7 @@ export class DashboardComponent implements OnInit {
   navs = [
     { url: '/animations', content: 'Animations' },
     { url: '/basic-form', content: 'Basic Form' },
+    { url: '/change-detection-option1', content: 'Change Detection Option One' },
     { url: '/customers-demo', content: 'Lazy Load Route' },
     { url: '/custom-pipe-demo', content: 'Custom Pipe Demo' },
     { url: '/dynamic-form', content: 'Dynamic Form' },

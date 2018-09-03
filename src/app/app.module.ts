@@ -33,6 +33,8 @@ import { SearchDemoComponent } from './components/search-demo/search-demo.compon
 // pipe
 import { FileSizePipe } from './shared/pipes/file-size.pipe';
 import { VanillaDemoComponent } from './components/vanilla-demo/vanilla-demo.component';
+import { ChangeDetectionOption1Component } from './components/change-detection-option1/change-detection-option1.component';
+import { CounterChildComponent } from './components/change-detection-option1/counter-child/counter-child.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +60,8 @@ import { VanillaDemoComponent } from './components/vanilla-demo/vanilla-demo.com
     RxjsTrialsComponent,
     SearchDemoComponent,
     VanillaDemoComponent,
+    ChangeDetectionOption1Component,
+    CounterChildComponent,
   ],
   imports: [
     AppRoutingModule,
