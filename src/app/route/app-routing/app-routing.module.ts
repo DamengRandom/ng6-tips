@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 // components
 import { AnimationsDemoComponent } from '../../components/animations-demo/animations-demo.component';
 import { BasicFormComponent } from '../../components/basic-form/basic-form.component';
+import { ChangeDetectionOption1Component } from '../../components/change-detection-option1/change-detection-option1.component';
 import { CustomPipeDemoComponent } from '../../components/custom-pipe-demo/custom-pipe-demo.component';
 import { DashboardComponent } from '../../components/dashboard/dashboard.component';
 import { DynamicFormParentComponent } from '../../components/dynamic-form-parent/dynamic-form-parent.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: 'animations', component: AnimationsDemoComponent },
   { path: 'basic-form', component: BasicFormComponent },
+  { path: 'change-detection-option1', component: ChangeDetectionOption1Component },
   { path: 'customers-demo', loadChildren: '../../../app/modules/customers-lazy-load/customers-lazy-load.module#CustomersLazyLoadModule' },
   { path: 'lazy-loading-demo', loadChildren: '../../../app/modules/lazy-loading-demo/lazy-loading-demo.module#LazyLoadingDemoModule' },
   { path: 'custom-pipe-demo', component: CustomPipeDemoComponent },
