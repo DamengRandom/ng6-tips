@@ -10,12 +10,12 @@ import { SamplesApiDemoService } from '../../services/samples-api-demo.service';
   providers: [SamplesApiDemoService]
 })
 export class ObservableHttpSampleComponent implements OnInit {
-  private errorMessage: String;
-  fotos = [];
-  originalFetch = [];
-  scrollFetch = [];
-  newFetchsSize = 100;
-  isFinished = false;
+  public errorMessage: String;
+  public fotos = [];
+  public originalFetch = [];
+  public scrollFetch = [];
+  public newFetchsSize = 100;
+  public isFinished = false;
 
   constructor(private samplesApiDemoService: SamplesApiDemoService) {}
 

@@ -1,5 +1,8 @@
-<nav>
-  <li *ngFor="let nav of navs">
-    <a [routerLink]="nav.url">{{ nav.content }}</a>
-  </li>
-</nav>
+<div>
+  <h3>- Trials -</h3>
+  <nav>
+      <li *ngFor="let nav of navs">
+        <a [routerLink]="nav.url">{{ nav.content }}</a>
+      </li>
+    </nav>
+</div>
