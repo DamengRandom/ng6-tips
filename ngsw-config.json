@@ -1,0 +1,48 @@
+{
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/*.css",
+          "/*.js"
+        ],
+        "urls": [
+          "https://fonts.googleapis.com/css?family=Montserrat",
+          "https://fonts.gstatic.com/**"
+        ]
+      }
+    }, {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**"
+        ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "fotos",
+      "urls": [
+        "https://jsonplaceholder.typicode.com/photos",
+        "https://api.cdnjs.com/libraries",
+        "https://via.placeholder.com/150",
+        "https://via.placeholder.com/150/**"
+      ],
+      "versions": 1,
+      "cacheConfig": {
+        "maxSize": 5,
+        "maxAge": "12h",
+        "timeout": "10s",
+        "strategy": "performance"
+      }
+    }
+  ]
+}

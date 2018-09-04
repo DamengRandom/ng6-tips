@@ -35,6 +35,8 @@ import { FileSizePipe } from './shared/pipes/file-size.pipe';
 import { VanillaDemoComponent } from './components/vanilla-demo/vanilla-demo.component';
 import { ChangeDetectionOption1Component } from './components/change-detection-option1/change-detection-option1.component';
 import { CounterChildComponent } from './components/change-detection-option1/counter-child/counter-child.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -73,7 +75,8 @@ import { CounterChildComponent } from './components/change-detection-option1/cou
     HttpClientModule,
     ReactiveFormsModule,
     NgxMasonryModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   exports: [
     BackButtonComponent
