@@ -37,6 +37,8 @@ import { ChangeDetectionOption1Component } from './components/change-detection-o
 import { CounterChildComponent } from './components/change-detection-option1/counter-child/counter-child.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { InputBindingDemoOneComponent } from './components/input-binding-demo-one/input-binding-demo-one.component';
+import { TextColorDirective } from './directives/text-color.directive';
 
 @NgModule({
   declarations: [
@@ -64,6 +66,8 @@ import { environment } from '../environments/environment';
     VanillaDemoComponent,
     ChangeDetectionOption1Component,
     CounterChildComponent,
+    InputBindingDemoOneComponent,
+    TextColorDirective,
   ],
   imports: [
     AppRoutingModule,

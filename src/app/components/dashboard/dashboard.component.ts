@@ -13,6 +13,7 @@ export class DashboardComponent implements OnInit {
     { url: '/customers-demo', content: 'Lazy Load Route' },
     { url: '/custom-pipe-demo', content: 'Custom Pipe Demo' },
     { url: '/dynamic-form', content: 'Dynamic Form' },
+    { url: '/input-bind-demo', content: 'Input Bind Demo' },
     { url: '/mission', content: 'Mission' },
     { url: '/obsr-http-sample', content: 'Http Observable Sample' },
     { url: '/obsr-sample', content: 'Observable Sample One' },

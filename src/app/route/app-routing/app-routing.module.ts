@@ -9,6 +9,7 @@ import { ChangeDetectionOption1Component } from '../../components/change-detecti
 import { CustomPipeDemoComponent } from '../../components/custom-pipe-demo/custom-pipe-demo.component';
 import { DashboardComponent } from '../../components/dashboard/dashboard.component';
 import { DynamicFormParentComponent } from '../../components/dynamic-form-parent/dynamic-form-parent.component';
+import { InputBindingDemoOneComponent } from '../../components/input-binding-demo-one/input-binding-demo-one.component';
 import { MissionControlComponent } from '../../components/mission-control/mission-control.component';
 import { ObservableHttpSampleComponent } from '../../components/observable-http-sample/observable-http-sample.component';
 import { ObservableSampleOneComponent } from '../../components/observable-sample-one/observable-sample-one.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'animations', component: AnimationsDemoComponent },
   { path: 'basic-form', component: BasicFormComponent },
   { path: 'change-detection-option1', component: ChangeDetectionOption1Component },
+  { path: 'input-bind-demo', component: InputBindingDemoOneComponent },
   { path: 'customers-demo', loadChildren: '../../../app/modules/customers-lazy-load/customers-lazy-load.module#CustomersLazyLoadModule' },
   { path: 'lazy-loading-demo', loadChildren: '../../../app/modules/lazy-loading-demo/lazy-loading-demo.module#LazyLoadingDemoModule' },
   { path: 'custom-pipe-demo', component: CustomPipeDemoComponent },
