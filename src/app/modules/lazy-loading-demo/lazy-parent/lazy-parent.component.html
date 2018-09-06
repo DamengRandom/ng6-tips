@@ -4,5 +4,6 @@
   <p>Source version controller</p>
   <button (click)="newMinor()">New Minor Version</button>
   <button (click)="newMajor()">New Major Version</button>
-  <app-lazy-child [major]="major" [minor]="minor"></app-lazy-child>
+  <app-lazy-child [major]="major" [minor]="minor" [textSize]="textSize" (changedSize)="receivedUpdatedSize($event)"></app-lazy-child>
+  <p *ngIf="receivedSize">Current updated (from child) text size: {{ receivedSize }}</p>
 </div>

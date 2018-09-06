@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChange } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChange, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-lazy-child',
@@ -8,9 +8,13 @@ import { Component, Input, OnChanges, SimpleChange } from '@angular/core';
 export class LazyChildComponent implements OnChanges {
   @Input() major: number;
   @Input() minor: number;
+  @Input() textSize: any;
+  @Output() changedSize = new EventEmitter();
   changeLog: string[] = [];
 
-  constructor() { }
+  constructor() {
+    console.log('textSize:', this.textSize);
+  }
 
   ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
     const log: string[] = [];
@@ -27,5 +31,11 @@ export class LazyChildComponent implements OnChanges {
     }
     this.changeLog.push(log.join(', '));
   }
-  // onOnchanges just use for input property chnages detection only !!!!
+  // onOnchanges just use for input property changes detection only !!!!
+
+  // output demo
+  updateTextSize() {
+    this.changedSize.emit(this.textSize / 2);
+    console.log('clicked? ');
+  }
 }
