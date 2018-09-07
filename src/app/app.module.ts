@@ -39,6 +39,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { InputBindingDemoOneComponent } from './components/input-binding-demo-one/input-binding-demo-one.component';
 import { TextColorDirective } from './directives/text-color.directive';
+import { ProgressBarDemoComponent } from './components/progress-bar-demo/progress-bar-demo.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { TextColorDirective } from './directives/text-color.directive';
     CounterChildComponent,
     InputBindingDemoOneComponent,
     TextColorDirective,
+    ProgressBarDemoComponent,
   ],
   imports: [
     AppRoutingModule,

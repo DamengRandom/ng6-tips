@@ -1,0 +1,18 @@
+:host {
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    .progress-container {
+      background-color: rgba(150, 150, 150, 0.6);
+      height: 12px;
+      width: 100%;
+    }
+    .progress-bar {
+      background-color: #db293c;
+      height: 12px;
+      width: 0%;
+    }
+  }
+}
