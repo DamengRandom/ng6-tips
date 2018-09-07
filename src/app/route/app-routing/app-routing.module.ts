@@ -15,6 +15,7 @@ import { ObservableHttpSampleComponent } from '../../components/observable-http-
 import { ObservableSampleOneComponent } from '../../components/observable-sample-one/observable-sample-one.component';
 import { ObservableSampleTwoComponent } from '../../components/observable-sample-two/observable-sample-two.component';
 import { OutputDemoComponent } from '../../components/output-demo/output-demo.component';
+import { ProgressBarDemoComponent } from '../../components/progress-bar-demo/progress-bar-demo.component';
 import { ResizerParentComponent } from '../../components/resizer-parent/resizer-parent.component';
 import { RxjsTrialsComponent } from '../../components/rxjs-trials/rxjs-trials.component';
 import { SearchDemoComponent } from '../../components/search-demo/search-demo.component';
@@ -37,6 +38,7 @@ const routes: Routes = [
   { path: 'obsr-sample', component: ObservableSampleOneComponent },
   { path: 'obsr-sample-two', component: ObservableSampleTwoComponent },
   { path: 'output-demo', component: OutputDemoComponent },
+  { path: 'progress-bar-demo', component: ProgressBarDemoComponent },
   { path: 'resize', component: ResizerParentComponent },
   { path: 'rxjs-trial', component: RxjsTrialsComponent },
   { path: 'vanilla-demo', component: VanillaDemoComponent }

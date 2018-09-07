@@ -19,6 +19,7 @@ export class DashboardComponent implements OnInit {
     { url: '/obsr-sample', content: 'Observable Sample One' },
     { url: '/obsr-sample-two', content: 'Observable Sample Two' },
     { url: '/output-demo', content: 'Output Demo' },
+    { url: '/progress-bar-demo', content: 'Progress Bar Demo' },
     { url: '/resize', content: 'Resize' },
     { url: '/rxjs-trial', content: 'Rxjs Trial' },
     { url: '/search-demo', content: 'Search Component Demo' },
