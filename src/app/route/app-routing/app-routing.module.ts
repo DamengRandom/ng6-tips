@@ -21,6 +21,7 @@ import { RxjsTrialsComponent } from '../../components/rxjs-trials/rxjs-trials.co
 import { SearchDemoComponent } from '../../components/search-demo/search-demo.component';
 import { VanillaDemoComponent } from '../../components/vanilla-demo/vanilla-demo.component';
 import { ObservablePractice01Component } from '../../components/observable-practice01/observable-practice01.component';
+import { ObservablePracticeTwoComponent } from '../../components/observable-practice-two/observable-practice-two.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -39,6 +40,7 @@ const routes: Routes = [
   { path: 'obsr-sample', component: ObservableSampleOneComponent },
   { path: 'obsr-sample-two', component: ObservableSampleTwoComponent },
   { path: 'obs-prac01', component: ObservablePractice01Component },
+  { path: 'obs-prac02', component: ObservablePracticeTwoComponent },
   { path: 'output-demo', component: OutputDemoComponent },
   { path: 'progress-bar-demo', component: ProgressBarDemoComponent },
   { path: 'resize', component: ResizerParentComponent },
