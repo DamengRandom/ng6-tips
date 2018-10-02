@@ -1,12 +1,38 @@
 <div>
+  <app-back-button></app-back-button>
   <h3>Observable Practice 01</h3>
   <div>
-    <h5>Example 1: </h5>
+    <h5>Example 1: [Even Handler]</h5>
     <button #generateButton class="generate-button">Generate random 6 length password</button>
     <p #passwordContent class="generate-content"></p>
   </div>
   <div>
-    <h5>Example 2: </h5>
-    
+    <h5>Example 2: [Operators]</h5>
+    <button (click)="ajaxCallObservable()">Get Some Data</button>
+    <div *ngFor="let ret of returns">
+      <p>Title: {{ ret.title }}</p>
+      <p>ID: {{ ret.id }}</p>
+    </div>
+  </div>
+  <div>
+    <h5>Example 3 (Version 2 of Example 2) :[Operators]</h5>
+    <button #ajaxTrigger>Trigger Ajax Call</button>
+    <div *ngFor="let v2ret of v2Returns">
+        <p>Title: {{ v2ret.title }}</p>
+        <p>ID: {{ v2ret.id }}</p>
+    </div>
+  </div>
+  <div>
+    <h5>Example 4: [Combined]</h5>
+    <input #inputID type="number" min="1" max="10" placeholder="Please type user ID" />
+    <select #selectResource>
+      <option value="albums">albums</option>
+      <option value="posts">posts</option>
+      <option value="todos">todos</option>
+    </select>
+    <div *ngFor="let comRet of comboReturns">
+        <p>Title: {{ comRet.title }}</p>
+        <p>ID: {{ comRet.id }}</p>
+    </div>
   </div>
 </div>
