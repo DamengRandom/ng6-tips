@@ -40,6 +40,7 @@ import { environment } from '../environments/environment';
 import { InputBindingDemoOneComponent } from './components/input-binding-demo-one/input-binding-demo-one.component';
 import { TextColorDirective } from './directives/text-color.directive';
 import { ProgressBarDemoComponent } from './components/progress-bar-demo/progress-bar-demo.component';
+import { ObservablePractice01Component } from './components/observable-practice01/observable-practice01.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { ProgressBarDemoComponent } from './components/progress-bar-demo/progres
     InputBindingDemoOneComponent,
     TextColorDirective,
     ProgressBarDemoComponent,
+    ObservablePractice01Component,
   ],
   imports: [
     AppRoutingModule,

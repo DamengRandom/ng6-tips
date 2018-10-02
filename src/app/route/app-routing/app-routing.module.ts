@@ -20,6 +20,7 @@ import { ResizerParentComponent } from '../../components/resizer-parent/resizer-
 import { RxjsTrialsComponent } from '../../components/rxjs-trials/rxjs-trials.component';
 import { SearchDemoComponent } from '../../components/search-demo/search-demo.component';
 import { VanillaDemoComponent } from '../../components/vanilla-demo/vanilla-demo.component';
+import { ObservablePractice01Component } from '../../components/observable-practice01/observable-practice01.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -37,6 +38,7 @@ const routes: Routes = [
   { path: 'obsr-http-sample', component: ObservableHttpSampleComponent },
   { path: 'obsr-sample', component: ObservableSampleOneComponent },
   { path: 'obsr-sample-two', component: ObservableSampleTwoComponent },
+  { path: 'obs-prac01', component: ObservablePractice01Component },
   { path: 'output-demo', component: OutputDemoComponent },
   { path: 'progress-bar-demo', component: ProgressBarDemoComponent },
   { path: 'resize', component: ResizerParentComponent },
@@ -54,4 +56,5 @@ const routes: Routes = [
   ],
   declarations: []
 })
+
 export class AppRoutingModule { }
