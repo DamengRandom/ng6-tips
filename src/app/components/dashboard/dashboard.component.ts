@@ -18,6 +18,7 @@ export class DashboardComponent implements OnInit {
     { url: '/obsr-http-sample', content: 'Http Observable Sample' },
     { url: '/obsr-sample', content: 'Observable Sample One' },
     { url: '/obsr-sample-two', content: 'Observable Sample Two' },
+    { url: '/obs-prac01', content: 'Observable Practice 01' },
     { url: '/output-demo', content: 'Output Demo' },
     { url: '/progress-bar-demo', content: 'Progress Bar Demo' },
     { url: '/resize', content: 'Resize' },
@@ -26,6 +27,7 @@ export class DashboardComponent implements OnInit {
     { url: '/lazy-loading-demo', content: 'Lazy Loading Demo' },
     { url: '/vanilla-demo', content: 'Vanilla JS Accordion Demo' }
   ];
+  
   constructor() { }
 
   ngOnInit() {
