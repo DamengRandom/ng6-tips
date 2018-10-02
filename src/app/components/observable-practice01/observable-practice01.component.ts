@@ -7,6 +7,7 @@ import { map } from 'rxjs/operators';
   templateUrl: './observable-practice01.component.html',
   styleUrls: ['./observable-practice01.component.scss']
 })
+
 export class ObservablePractice01Component implements OnInit, AfterViewInit {
   @ViewChild('generateButton') generateButton;  // buttonDOM = document.querySelector('.generate-button');
   @ViewChild('passwordContent') passwordContent; // passwordDOM = document.querySelector('.generate-content');
@@ -77,15 +78,9 @@ export class ObservablePractice01Component implements OnInit, AfterViewInit {
       );
 
     Observable.combineLatest(userId$, resource$)
-      .switchMap(_ => {
-        console.log('before pass userId$ ', userId$.subscribe((data) => {
-          console.log('data: ', data);
-          return data;
-        }, (err) => {
-          console.log('userId error: ', err);
-        }));
-        console.log('before pass resource$ ', resource$);
-        return this.getFinalData([userId$, resource$]);
+      .switchMap(res => {
+        console.log('wahst res? ', res);
+        return this.getFinalData(res);
       })
       .subscribe(
         res => {
@@ -98,7 +93,7 @@ export class ObservablePractice01Component implements OnInit, AfterViewInit {
       );
   }
 
-  getFinalData([userId$, resource$]) {
-    return Observable.ajax(`https://jsonplaceholder.typicode.com/${resource$}?userId=${userId$}`);
+  getFinalData(res) {
+    return Observable.ajax(`https://jsonplaceholder.typicode.com/${res[1]}?userId=${res[0]}`);
   }
 }
