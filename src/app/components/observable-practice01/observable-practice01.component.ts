@@ -26,7 +26,7 @@ export class ObservablePractice01Component implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.randomPassword();
     this.ajaxCallObservableVersion2();
-    this.getCombinedAPIReturns();
+    this.getCombinedReturns();
   }
 
   randomPassword() {
@@ -66,20 +66,20 @@ export class ObservablePractice01Component implements OnInit, AfterViewInit {
     return Observable.ajax(`${url}?userId=${userId}`);
   }
 
-  getCombinedAPIReturns() {
-    const userId$ = Observable.fromEvent(this.inputID.nativeElement, 'keyup')
+  getCombinedReturns() {
+    const userId$ = Observable.fromEvent(this.inputID.nativeElement, 'keyup') // fromEvent is addEventListener
       .pipe(
         map((e: any) => e.target.value)
       );
 
-    const resource$ = Observable.fromEvent(this.selectResource.nativeElement, 'change')
+    const resource$ = Observable.fromEvent(this.selectResource.nativeElement, 'change') // observable uses '$' symbol
       .pipe(
         map((e: any) => e.target.value)
       );
 
-    Observable.combineLatest(userId$, resource$)
+    Observable.combineLatest(userId$, resource$) // combine two observables into one !!!
       .switchMap(res => {
-        console.log('wahst res? ', res);
+        console.log('whats res? ', res);
         return this.getFinalData(res);
       })
       .subscribe(

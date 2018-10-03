@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-observable-practice-two',
@@ -19,6 +20,7 @@ export class ObservablePracticeTwoComponent implements OnInit {
 
   ngOnInit() {
     this.getObservableOutputs();
+    this.getCombinedAPIData();
   }
 
   insdeObservableFn() {
@@ -27,6 +29,26 @@ export class ObservablePracticeTwoComponent implements OnInit {
   }
 
   getObservableOutputs() {
-    this.observableDemo.subscribe(res => console.log('response: ', res));
+    // this.observableDemo.subscribe(res => console.log('response: ', res));
+    this.subjObserver.subscribe(res => console.log('thread/service A: ', res));
+    this.subjObserver.subscribe(res => console.log('thread/service B: ', res));
+    this.observableDemo.subscribe(this.subjObserver); // Observable wrapped in a subject, causing shared execution
+  }
+
+  getCombinedAPIData() {
+    const apiData01$ = Observable.ajax('https://jsonplaceholder.typicode.com/albums').pipe(
+      map(res => res.response.slice(0, 3))
+    );
+
+    const apiData02$ = Observable.ajax('https://jsonplaceholder.typicode.com/posts').pipe(
+      map(res => res.response.slice(0, 3))
+    );
+
+    return Observable.combineLatest(apiData01$, apiData02$)
+      .subscribe(res => {
+        console.log('combined response: ', res);
+      }, err => {
+        console.log('Error occurred: ', err);
+      });
   }
 }
