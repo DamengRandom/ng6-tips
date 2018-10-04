@@ -42,6 +42,7 @@ import { TextColorDirective } from './directives/text-color.directive';
 import { ProgressBarDemoComponent } from './components/progress-bar-demo/progress-bar-demo.component';
 import { ObservablePractice01Component } from './components/observable-practice01/observable-practice01.component';
 import { ObservablePracticeTwoComponent } from './components/observable-practice-two/observable-practice-two.component';
+import { DynamicInputsComponent } from './components/dynamic-inputs/dynamic-inputs.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { ObservablePracticeTwoComponent } from './components/observable-practice
     ProgressBarDemoComponent,
     ObservablePractice01Component,
     ObservablePracticeTwoComponent,
+    DynamicInputsComponent,
   ],
   imports: [
     AppRoutingModule,

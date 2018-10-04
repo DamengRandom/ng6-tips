@@ -9,7 +9,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 export class DynamicFormComponent implements OnInit {
   form: FormGroup;
-
+  numOfCodes = 6;
   @Input() formFieldObject;
 
   fields = [];
