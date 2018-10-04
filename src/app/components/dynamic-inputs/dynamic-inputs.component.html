@@ -1,0 +1,18 @@
+<div>
+  <app-back-button></app-back-button>
+  <div class="container">
+    <form [formGroup]="codeForm">
+      <div class="codeForm">
+        <div formArrayName="codes" *ngFor="let code of codeForm.controls.codes.controls; let i=index" class="code-block">
+          <div [formGroupName]="i" class="codeForm">
+            <input type="text" class="form-control" formControlName="code" aria-label="enter code">
+          </div>
+        </div>
+      </div>
+      <button [disabled]="!codeForm.valid" (click)="submitData()">Submit</button>
+      <pre>
+        Result would be: {{ formattedCode }}
+      </pre>
+    </form>
+  </div>
+</div>

@@ -9,6 +9,7 @@ import { ChangeDetectionOption1Component } from '../../components/change-detecti
 import { CustomPipeDemoComponent } from '../../components/custom-pipe-demo/custom-pipe-demo.component';
 import { DashboardComponent } from '../../components/dashboard/dashboard.component';
 import { DynamicFormParentComponent } from '../../components/dynamic-form-parent/dynamic-form-parent.component';
+import { DynamicInputsComponent } from '../../components/dynamic-inputs/dynamic-inputs.component';
 import { InputBindingDemoOneComponent } from '../../components/input-binding-demo-one/input-binding-demo-one.component';
 import { MissionControlComponent } from '../../components/mission-control/mission-control.component';
 import { ObservableHttpSampleComponent } from '../../components/observable-http-sample/observable-http-sample.component';
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: 'lazy-loading-demo', loadChildren: '../../../app/modules/lazy-loading-demo/lazy-loading-demo.module#LazyLoadingDemoModule' },
   { path: 'custom-pipe-demo', component: CustomPipeDemoComponent },
   { path: 'dynamic-form', component: DynamicFormParentComponent },
+  { path: 'dynamic-inputs', component: DynamicInputsComponent },
   { path: 'search-demo', component: SearchDemoComponent },
   { path: 'mission', component: MissionControlComponent },
   { path: 'obsr-http-sample', component: ObservableHttpSampleComponent },
